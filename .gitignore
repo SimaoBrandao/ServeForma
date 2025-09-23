@@ -1,19 +1,33 @@
-# dependências
-node_modules
+# Dependências
+node_modules/
 
-# build de produção
-dist
+# Build de produção
+dist/
 
-# caches
+# Diretório do Vercel
+.vercel/
+
+# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-.vercel
 
-# configs do sistema/editor
+# Sistema / Cache do editor
 .DS_Store
 Thumbs.db
 .vscode/
 .idea/
+
+# Arquivos temporários
+*.swp
+*.swo
+
+# Informações de compilação do TypeScript
+*.tsbuildinfo
+
+# Arquivos de ambiente (nunca versionar chaves secretas!)
+.env
+.env.local
+.env.*.local
