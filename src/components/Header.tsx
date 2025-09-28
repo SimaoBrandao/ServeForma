@@ -1,13 +1,13 @@
+//cabeçalho
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
+import { motion, AnimatePresence, useScroll } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
-  const logoText = 'Serveforma';
   const navigation = [
     { name: 'Início', href: '#home' },
+    { name: 'Quem somos', href: '#about' },
     { name: 'Serviços', href: '#services' },
-    { name: 'Sobre Nós', href: '#about' },
     { name: 'Contacto', href: '#contact' },
   ];
   const ctaText = 'Fale Connosco';
@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
     return () => unsubscribe();
   }, [scrollY]);
 
-  return (
+  return (    
     <motion.header
       className={`fixed top-0 w-full z-50 transition-all duration-300 py-4 ${
         scrolled ? 'bg-zinc-50/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
@@ -34,16 +34,22 @@ export const Header: React.FC = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
-        <motion.div
-          className="font-bold text-2xl text-zinc-900 hover:scale-110 transition-transform duration-200"
-        >
-          {logoText}
-        </motion.div>
+        
+        {/* Logo + Nome lado a lado */}
+        <a href="#home" className="flex items-center gap-3 cursor-pointer">
+          <img
+            src="/images/logo.png"
+            alt="Serveforma Logo"
+            className="w-10 h-10 object-contain rounded-full bg-white p-1 shadow"
+          />
+          <span className="font-bold text-2xl text-zinc-900 hover:text-orange-600 transition-colors">
+            ServeForma
+          </span>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          {navigation.map((item, index) => (
+          {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
@@ -105,7 +111,7 @@ export const Header: React.FC = () => {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
             <div className="px-6 py-4 space-y-4">
-              {navigation.map((item, index) => (
+              {navigation.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}

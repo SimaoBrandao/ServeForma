@@ -1,28 +1,29 @@
+//Pagina contatos
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export const CTASection: React.FC = () => {
-  const title = 'Contact Us';
-  const description = 'Ready to get started? Get in touch with our team.';
+  const title = 'Contatos';
+  const description = 'Pronto para começar? Entre em contato com nossa equipe.';
   
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       label: 'Email',
-      value: 'hello@company.com',
-      href: 'mailto:hello@company.com',
+      value: 'geral@serveforma.co.ao',
+      href: 'mailto:geral@serveforma.co.ao',
     },
     {
       icon: <Phone className="w-6 h-6" />,
-      label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      label: 'Telemóvel',
+      value: '+244 951461675 / 924530806',
+      href: 'tel:+244951461675',
     },
     {
       icon: <MapPin className="w-6 h-6" />,
-      label: 'Address',
-      value: 'San Francisco, CA',
+      label: 'Morada',
+      value: 'Tala Hady-Rua F, Casa 52A, Cazenga ',
       href: '#',
     },
   ];
@@ -75,28 +76,28 @@ export const CTASection: React.FC = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            <h3 className="text-2xl font-semibold text-zinc-900 mb-6">Send us a message</h3>
+            <h3 className="text-2xl font-semibold text-zinc-900 mb-6">Envie-nos uma mensagem</h3>
             
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-zinc-700 mb-2">
-                    First Name
+                    Primeiro nome
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-zinc-900 focus:border-zinc-900"
-                    placeholder="John"
+                    placeholder="João"
                   />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-zinc-700 mb-2">
-                    Last Name
+                    Sobrenome
                   </label>
                   <input
                     type="text"
                     className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-zinc-900 focus:border-zinc-900"
-                    placeholder="Doe"
+                    placeholder="Soares"
                   />
                 </div>
               </div>
@@ -108,18 +109,18 @@ export const CTASection: React.FC = () => {
                 <input
                   type="email"
                   className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-zinc-900 focus:border-zinc-900"
-                  placeholder="john@example.com"
+                  placeholder="joao@example.com"
                 />
               </div>
 
               <div>
                 <label className="block text-sm font-medium text-zinc-700 mb-2">
-                  Message
+                  Mensagem
                 </label>
                 <textarea
                   rows={5}
                   className="w-full px-4 py-3 border border-zinc-300 rounded-lg focus:outline-none focus:ring-1 focus:ring-zinc-900 focus:border-zinc-900 resize-none"
-                  placeholder="Tell us about your project..."
+                  placeholder="Conte-nos sobre seu projeto..."
                 />
               </div>
 
@@ -127,7 +128,7 @@ export const CTASection: React.FC = () => {
                 type="submit"
                 className="w-full bg-zinc-900 text-white py-3 px-6 rounded-lg font-semibold hover:bg-zinc-800 hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
               >
-                Send Message
+                Enviar mensagem
               </motion.button>
             </form>
           </motion.div>
@@ -140,9 +141,9 @@ export const CTASection: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
           >
             <div>
-              <h3 className="text-2xl font-semibold text-zinc-800 mb-6">Get in touch</h3>
+              <h3 className="text-2xl font-semibold text-zinc-800 mb-6">Entre em contato</h3>
               <p className="text-zinc-700 mb-8">
-                We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+                Adoraríamos ouvir você. Envie-nos uma mensagem e responderemos o mais breve possível.
               </p>
             </div>
 

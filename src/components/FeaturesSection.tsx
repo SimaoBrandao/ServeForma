@@ -1,3 +1,4 @@
+//pagina serviços
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { FileText, Wrench, Wifi, Zap, Coffee, Megaphone } from 'lucide-react';
@@ -31,7 +32,12 @@ export const FeaturesSection: React.FC = () => {
     {
       icon: <Zap className="w-8 h-8" />,
       title: 'Infraestruturas Eléctricas',
-      description: 'Projetos de eletrificação, redes de média e baixa tensão, quadros elétricos.',
+      description: 'Execução de projetos de eletrificação, instalação de redes de média e baixa tensão, quadros elétricos, sistemas de iluminação e proteção.',
+    },
+    {
+      icon: <FileText className="w-8 h-8" />,
+      title: 'Licenciamento Técnico.',
+      description: 'Apoio no processo de legalização de projectos elétricos e de telecomunicações junto das entidades competentes, garantindo conformidade normativa.',
     },
     {
       icon: <Coffee className="w-8 h-8" />,

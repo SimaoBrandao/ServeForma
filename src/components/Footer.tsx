@@ -1,16 +1,16 @@
+//rodapé
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe } from 'lucide-react';
 
 export const Footer: React.FC = () => {
-  const companyName = 'Serveforma';
+  const companyName = 'ServeForma';
   const currentYear = new Date().getFullYear();
   
   const contactInfo = [
-    { name: 'Telefone', href: 'tel:+244951461675', icon: <Phone className="w-5 h-5" />, text: '+244 951 461 675' },
+    { name: 'Telefone', href: 'tel:+244951461675', icon: <Phone className="w-5 h-5" />, text: '+244 951 461 675 / 924 530 806' },
     { name: 'Email', href: 'mailto:geral@serveforma.co.ao', icon: <Mail className="w-5 h-5" />, text: 'geral@serveforma.co.ao' },
-    { name: 'Localização', href: '#', icon: <MapPin className="w-5 h-5" />, text: 'Luanda, Angola' },
-    { name: 'Website', href: 'https://www.serveforma.co.ao', icon: <Globe className="w-5 h-5" />, text: 'www.serveforma.co.ao' },
+    { name: 'Localização', href: '#', icon: <MapPin className="w-5 h-5" />, text: 'Luanda, Angola' },    
   ];
 
   return (
@@ -44,27 +44,7 @@ export const Footer: React.FC = () => {
               </a>
             ))}
           </div>
-        </div>
-        
-        {/* Company Mission */}
-        <motion.div
-          className="pt-8 border-t border-zinc-600/50 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <motion.p 
-            className="text-zinc-300 text-sm hover:text-zinc-200 transition-colors duration-300 mb-2"
-          >
-            "Fornecer soluções completas em produtos e serviços com excelência e eficiência"
-          </motion.p>
-          <motion.p 
-            className="text-zinc-400 text-xs"
-          >
-            Luanda, Angola - tala hadi rua F casa 52A, cazenga
-          </motion.p>
-        </motion.div>
+        </div>  
       </div>
     </footer>
   );
