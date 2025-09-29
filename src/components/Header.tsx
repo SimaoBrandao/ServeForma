@@ -40,8 +40,9 @@ export const Header: React.FC = () => {
           <img
             src="/images/logo.png"
             alt="Serveforma Logo"
-            className="w-10 h-10 object-contain rounded-full bg-white p-1 shadow"
+            className="w-16 h-16 object-contain rounded-full bg-white shadow"
           />
+
           <span className="font-bold text-2xl text-zinc-900 hover:text-orange-600 transition-colors">
             ServeForma
           </span>
