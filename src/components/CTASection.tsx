@@ -17,7 +17,7 @@ export const CTASection: React.FC = () => {
     {
       icon: <Phone className="w-6 h-6" />,
       label: 'Telemóvel',
-      value: '+244 951461675 / 924530806',
+      value: '+244 951461675',
       href: 'tel:+244951461675',
     },
     {

@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
   
   const contactInfo = [
-    { name: 'Telefone', href: 'tel:+244951461675', icon: <Phone className="w-5 h-5" />, text: '+244 951 461 675 / 924 530 806' },
+    { name: 'Telefone', href: 'tel:+244951461675', icon: <Phone className="w-5 h-5" />, text: '+244 951 461 675' },
     { name: 'Email', href: 'mailto:geral@serveforma.co.ao', icon: <Mail className="w-5 h-5" />, text: 'geral@serveforma.co.ao' },
     { name: 'Localização', href: '#', icon: <MapPin className="w-5 h-5" />, text: 'Luanda, Angola' },    
   ];
