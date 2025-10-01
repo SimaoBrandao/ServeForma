@@ -43,7 +43,7 @@ export const Header: React.FC = () => {
             className="w-16 h-16 object-contain rounded-full bg-white shadow"
           />
 
-          <span className="font-bold text-2xl text-zinc-900 hover:text-orange-600 transition-colors">
+          <span className="font-bold text-2xl text-zinc-900 hover:text-amber-600 transition-colors">
             ServeForma
           </span>
         </a>
@@ -54,7 +54,7 @@ export const Header: React.FC = () => {
             <a
               key={item.name}
               href={item.href}
-              className="text-zinc-600 hover:text-orange-600 transform hover:scale-110 hover:-translate-y-0.5 active:scale-95 transition-all duration-200 cursor-pointer"
+              className="text-zinc-600 hover:text-amber-600 transform hover:scale-110 hover:-translate-y-0.5 active:scale-95 transition-all duration-200 cursor-pointer"
             >
               {item.name}
             </a>
