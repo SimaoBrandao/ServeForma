@@ -7,11 +7,20 @@ export const HeroSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
 
-  // Slides com imagens locais
+  // Slides com imagens e textos
   const slides = [
-    { url: 'https://c8.alamy.com/comp/2GN13B9/angola-luanda-province-capital-luanda-view-of-the-waterfront-called-marginal-modern-office-buildings-in-the-city-center-2GN13B9.jpg', title: '' },   
-    { url: '/images/eletrificacao3.jpg', title: '' },
-    { url: '/images/cofeebreak.jpg', title: '' },
+    { 
+      url: 'https://images.unsplash.com/photo-1611599281058-94426d0618a7?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sigmund-r9PeXDCJyEw-unsplash.jpg', 
+      text: 'Projetamos e implementamos infraestruturas de eletrificação modernas, seguras e sustentáveis.' 
+    },
+    { 
+      url: 'https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=luca-bravo-9l_326FISzk-unsplash.jpg', 
+      text: 'Fornecemos soluções completas em produtos e serviços com excelência e eficiência para empresas e instituições em Angola.'
+    }, 
+    { 
+      url: 'https://images.unsplash.com/photo-1527169402691-feff5539e52c?ixlib=rb-4.1.0&auto=format&fit=crop&w=1600&q=80', 
+      text: 'Organizamos eventos corporativos e coffee breaks de qualidade para a sua empresa.' 
+    },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,12 +43,16 @@ export const HeroSection: React.FC = () => {
       {slides.map((slide, index) => (
         <motion.div
           key={index}
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${slide.url})` }}
+          className="absolute inset-0"
           initial={{ opacity: 0 }}
           animate={{ opacity: currentSlide === index ? 1 : 0 }}
           transition={{ duration: 1 }}
         >
+          <img
+            src={slide.url}
+            alt={`slide-${index}`}
+            className="w-full h-full object-cover"
+          />
           <div className="absolute inset-0 bg-black bg-opacity-50"></div>
         </motion.div>
       ))}
@@ -56,13 +69,13 @@ export const HeroSection: React.FC = () => {
         </motion.h1>
 
         <motion.p
+          key={currentSlide} // <- força a animação ao trocar de texto
           className="text-xl md:text-2xl text-white max-w-3xl mx-auto mt-6 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-          Fornecemos soluções completas em produtos e serviços com excelência e
-          eficiência para empresas e instituições em Angola.
+          {slides[currentSlide].text}
         </motion.p>
 
         {/* Botões CTA */}
