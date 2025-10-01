@@ -10,11 +10,11 @@ export const HeroSection: React.FC = () => {
   // Slides com imagens e textos
   const slides = [
     { 
-      url: 'https://images.unsplash.com/photo-1611599281058-94426d0618a7?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=sigmund-r9PeXDCJyEw-unsplash.jpg', 
+      url: '/images/eletricidade.jpg', 
       text: 'Projetamos e implementamos infraestruturas de eletrificação modernas, seguras e sustentáveis.' 
     },
     { 
-      url: 'https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?ixlib=rb-4.1.0&q=85&fm=jpg&crop=entropy&cs=srgb&dl=luca-bravo-9l_326FISzk-unsplash.jpg', 
+      url: '/images/servicos.jpg', 
       text: 'Fornecemos soluções completas em produtos e serviços com excelência e eficiência para empresas e instituições em Angola.'
     }, 
     { 
