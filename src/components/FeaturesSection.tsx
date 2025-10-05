@@ -1,7 +1,7 @@
 //pagina serviços
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { FileText, Wrench, Wifi, Zap, Coffee, Megaphone } from 'lucide-react';
+import { Package, Cog, Wifi, Zap, ClipboardCheck, Coffee, Gift} from 'lucide-react';
 
 export const FeaturesSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -15,12 +15,12 @@ export const FeaturesSection: React.FC = () => {
   
   const features = [
     {
-      icon: <FileText className="w-8 h-8" />,
+      icon: <Package className="w-8 h-8" />,
       title: 'Fornecimento de Produtos Gerais',
       description: 'Material de escritório, informática, consumíveis, mobiliário e electrónica.',
     },
     {
-      icon: <Wrench className="w-8 h-8" />,
+      icon: <Cog className="w-8 h-8" />,
       title: 'Serviços de Apoio Operacional',
       description: 'Manutenção, electricidade, canalização, limpeza e logística.',
     },
@@ -35,7 +35,7 @@ export const FeaturesSection: React.FC = () => {
       description: 'Execução de projetos de eletrificação, instalação de redes de média e baixa tensão, quadros elétricos, sistemas de iluminação e proteção.',
     },
     {
-      icon: <FileText className="w-8 h-8" />,
+      icon: <ClipboardCheck className="w-8 h-8" />,
       title: 'Licenciamento Técnico.',
       description: 'Apoio no processo de legalização de projectos elétricos e de telecomunicações junto das entidades competentes, garantindo conformidade normativa.',
     },
@@ -45,7 +45,7 @@ export const FeaturesSection: React.FC = () => {
       description: 'Fornecimento de refeições, coffee break e apoio em eventos corporativos.',
     },
     {
-      icon: <Megaphone className="w-8 h-8" />,
+      icon: <Gift className="w-8 h-8" />,
       title: 'Publicidade & Brindes',
       description: 'Impressão, personalização de material, uniformes e brindes empresariais.',
     },
@@ -91,7 +91,7 @@ export const FeaturesSection: React.FC = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
             >
-              <div className="w-16 h-16 bg-orange-600 text-white rounded-lg flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-[#d4af37] text-white rounded-lg flex items-center justify-center mx-auto mb-6">
                 {feature.icon}
               </div>
               <h3 className="text-xl font-semibold text-zinc-900 mb-4">
