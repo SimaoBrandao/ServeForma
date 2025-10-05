@@ -18,7 +18,7 @@ export const Footer: React.FC = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-8 mb-8">
           <div className="text-center md:text-left">
-            <div className="font-bold text-3xl mb-4 text-orange-500">{companyName}</div>
+            <div className="font-bold text-3xl mb-4 text-[#d4af37]">{companyName}</div>
             <p className="text-zinc-300 mb-4 leading-relaxed">
               Empresa angolana dedicada ao fornecimento de produtos e serviços essenciais para empresas e instituições. Atuamos com foco em qualidade, rapidez e soluções personalizadas.
             </p>
@@ -28,7 +28,7 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-xl font-semibold text-orange-500 mb-4">Informações de Contacto</h3>
+            <h3 className="text-xl font-semibold text-[#d4af37] mb-4">Informações de Contacto</h3>
             {contactInfo.map((contact) => (
               <a
                 key={contact.name}
@@ -37,7 +37,7 @@ export const Footer: React.FC = () => {
                 target={contact.name === 'Website' ? '_blank' : undefined}
                 rel={contact.name === 'Website' ? 'noopener noreferrer' : undefined}
               >
-                <div className="w-8 h-8 bg-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 bg-[#d4af37] rounded-full flex items-center justify-center flex-shrink-0">
                   {contact.icon}
                 </div>
                 <span>{contact.text}</span>

@@ -87,7 +87,7 @@ export const HeroSection: React.FC = () => {
         >
           <a
             href="#contact"
-            className="flex items-center justify-center px-8 py-4 bg-orange-600 text-white rounded-lg shadow-lg hover:bg-orange-700 hover:scale-105 active:scale-95 transition-all duration-200"
+            className="flex items-center justify-center px-8 py-4 bg-[#d4af37] text-white rounded-lg shadow-lg hover:bg-[#d4af37] hover:scale-105 active:scale-95 transition-all duration-200"
           >
             <span className="mr-2">Fale Connosco</span>
             <ArrowRight className="w-5 h-5" />
@@ -95,7 +95,7 @@ export const HeroSection: React.FC = () => {
 
           <a
             href="#services"
-            className="flex items-center justify-center px-8 py-4 border-2 border-white bg-transparent text-white rounded-lg shadow-md hover:bg-white hover:text-orange-600 hover:scale-105 active:scale-95 transition-all duration-200"
+            className="flex items-center justify-center px-8 py-4 border-2 border-white bg-transparent text-white rounded-lg shadow-md hover:bg-white hover:text-[#d4af37] hover:scale-105 active:scale-95 transition-all duration-200"
           >
             Nossos Serviços
           </a>

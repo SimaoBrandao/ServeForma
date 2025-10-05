@@ -45,7 +45,7 @@ export const TestimonialsSection: React.FC = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
           >
-            <h3 className="text-xl font-bold text-orange-600 mb-3">Missão</h3>
+            <h3 className="text-xl font-bold text-[#d4af37] mb-3">Missão</h3>
             <p className="text-zinc-700">
               Fornecer soluções completas em produtos e serviços com excelência e eficiência.
             </p>
@@ -57,7 +57,7 @@ export const TestimonialsSection: React.FC = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <h3 className="text-xl font-bold text-orange-600 mb-3">Visão</h3>
+            <h3 className="text-xl font-bold text-[#d4af37] mb-3">Visão</h3>
             <p className="text-zinc-700">
               Ser referência em Angola como fornecedor de confiança e qualidade.
             </p>
@@ -69,7 +69,7 @@ export const TestimonialsSection: React.FC = () => {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.7 }}
           >
-            <h3 className="text-xl font-bold text-orange-600 mb-3">Valores</h3>
+            <h3 className="text-xl font-bold text-[#d4af37] mb-3">Valores</h3>
             <ul className="list-disc list-inside text-zinc-700 space-y-1">
               <li>Compromisso</li>
               <li>Qualidade</li>
