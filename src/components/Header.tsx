@@ -64,7 +64,7 @@ export const Header: React.FC = () => {
         {/* CTA Button */}
         <a
           href={ctaHref}
-          className="hidden md:inline-flex items-center px-6 py-2 bg-[#d4af37] text-white rounded-lg hover:bg-orange-700 transform hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+          className="hidden md:inline-flex items-center px-6 py-2 bg-[#d4af37] text-white rounded-lg hover:bg-[#d4af37] transform hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
         >
           {ctaText}
         </a>
