@@ -1,13 +1,13 @@
-//cabeçalho
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence, useScroll } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useTransform } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
+  const logoText = 'Serveforma';
   const navigation = [
     { name: 'Início', href: '#home' },
     { name: 'Quem somos', href: '#about' },
-    { name: 'Serviços', href: '#services' },
+    { name: 'Serviços', href: '#services'},
     { name: 'Contacto', href: '#contact' },
   ];
   const ctaText = 'Fale Connosco';
@@ -24,7 +24,7 @@ export const Header: React.FC = () => {
     return () => unsubscribe();
   }, [scrollY]);
 
-  return (    
+  return (
     <motion.header
       className={`fixed top-0 w-full z-50 transition-all duration-300 py-4 ${
         scrolled ? 'bg-zinc-50/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
@@ -34,27 +34,25 @@ export const Header: React.FC = () => {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <nav className="container mx-auto px-6 flex items-center justify-between">
-        
-        {/* Logo + Nome lado a lado */}
-        <a href="#home" className="flex items-center gap-3 cursor-pointer">
-          <img
-            src="/images/logo.png"
-            alt="Serveforma Logo"
-            className="w-16 h-16 object-contain rounded-full bg-white shadow"
-          />
+        {/* Logo */}
+        <motion.div
+        className="flex items-center gap-2 font-bold text-2xl text-zinc-900 hover:scale-110 transition-transform duration-200">
+        <img
+          src="/images/logo.png"            
+          alt="Logo"
+          className="w-16 h-16 object-contain rounded-full bg-white shadow"
+        />
+         <span className="text-2xl">{logoText}</span>
+        </motion.div>
 
-          <span className="font-bold text-2xl text-zinc-900 hover:text-[#d4af37] transition-colors">
-            ServeForma
-          </span>
-        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
-          {navigation.map((item) => (
+          {navigation.map((item, index) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-zinc-600 hover:text-[#d4af37] transform hover:scale-110 hover:-translate-y-0.5 active:scale-95 transition-all duration-200 cursor-pointer"
+              className="text-zinc-600 hover:text-[#d4af37]  transform hover:scale-110 hover:-translate-y-0.5 active:scale-95 transition-all duration-200 cursor-pointer"
             >
               {item.name}
             </a>
@@ -64,7 +62,7 @@ export const Header: React.FC = () => {
         {/* CTA Button */}
         <a
           href={ctaHref}
-          className="hidden md:inline-flex items-center px-6 py-2 bg-[#d4af37] text-white rounded-lg hover:bg-[#d4af37] transform hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
+          className="hidden md:inline-flex items-center px-6 py-2 bg-[#d4af37]  text-white rounded-lg hover:bg-[#d4af37]  transform hover:scale-105 active:scale-95 transition-all duration-200 cursor-pointer"
         >
           {ctaText}
         </a>
@@ -112,7 +110,7 @@ export const Header: React.FC = () => {
             transition={{ duration: 0.3, ease: 'easeInOut' }}
           >
             <div className="px-6 py-4 space-y-4">
-              {navigation.map((item) => (
+              {navigation.map((item, index) => (
                 <a
                   key={item.name}
                   href={item.href}

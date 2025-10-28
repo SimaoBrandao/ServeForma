@@ -18,7 +18,7 @@ export const HeroSection: React.FC = () => {
       text: 'Fornecemos soluções completas em produtos e serviços com excelência e eficiência para empresas e instituições em Angola.'
     }, 
     { 
-      url: 'https://images.unsplash.com/photo-1527169402691-feff5539e52c?ixlib=rb-4.1.0&auto=format&fit=crop&w=1600&q=80', 
+      url: '/images/eventos.jpeg', 
       text: 'Organizamos eventos corporativos e coffee breaks de qualidade para a sua empresa.' 
     },
   ];
@@ -29,7 +29,7 @@ export const HeroSection: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000); // muda a cada 5 segundos
+    }, 7000); // muda a cada 7 segundos
     return () => clearInterval(interval);
   }, [slides.length]);
 

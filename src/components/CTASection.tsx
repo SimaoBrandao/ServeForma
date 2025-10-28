@@ -11,8 +11,8 @@ export const CTASection: React.FC = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       label: 'Email',
-      value: 'geral@serveforma.co.ao',
-      href: 'mailto:geral@serveforma.co.ao',
+      value: 'geral@serveforma.ao',
+      href: 'mailto:geral@serveforma.ao',
     },
     {
       icon: <Phone className="w-6 h-6" />,
