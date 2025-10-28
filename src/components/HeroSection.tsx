@@ -29,7 +29,7 @@ export const HeroSection: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 8000); // muda a cada 8 segundos
+    }, 8000); // muda a cada 9 segundos
     return () => clearInterval(interval);
   }, [slides.length]);
 
